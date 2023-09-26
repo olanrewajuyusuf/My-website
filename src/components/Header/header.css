@@ -1,0 +1,139 @@
+header, nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: 'Pacifico', cursive;
+}
+header {
+    width: 100%;
+    padding: 15px;
+    background-color: rgb(0, 27, 27);
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 5px;
+    z-index: 1;
+}
+.mobile-nav, .menu {
+    display: none;
+}
+header .desktop-nav {
+    padding-right: 100px;
+    align-items: center;
+}
+header .desktop-nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+a {
+    text-decoration: none;
+    color: cyan;
+}
+header .desktop-nav ul li a {
+    border-bottom: 1px solid rgb(255, 0, 43);
+}
+header .desktop-nav ul li a:hover {
+    color: rgb(255, 0, 43);
+    border-color: cyan;
+}
+._btn-wrap {
+    width: 100px;
+    height: 45px;
+    border: 2px solid;
+    position: relative;
+    margin-left: 20px;
+}
+._resume_btn {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: -7px;
+    left: -6px;
+    background-color: rgb(255, 0, 43);
+    color: rgb(0, 87, 87);
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 18px;
+}
+._resume_btn:hover {
+    background-color: rgb(255, 0, 43);
+    color: cyan;
+}
+
+/* =========== Logo style ============= */
+.logo-wrap {
+    position: relative;
+    padding-left: 100px;
+}
+.logo {
+    width: 20px;
+    height: 1px;
+    background-color: transparent;
+    border-top: 15px solid transparent;
+    border-left: 15px solid rgb(255, 0, 43);
+    border-bottom: 15px solid transparent;
+    transform: rotate(-20deg);
+}
+.logo::after {
+    content: '';
+    position: absolute;
+    top: -17px;
+    left: -22px;
+    width: 20px;
+    height: 1px;
+    background-color: transparent;
+    border-top: 15px solid transparent;
+    border-right: 15px solid cyan;
+    border-bottom: 15px solid transparent;
+    transform: rotate(40deg);
+}
+.logo-wrap h1 {
+    
+    position: absolute;
+    top: -30px;
+    left: 127px;
+}
+
+@media (max-width: 750px) {
+    header {
+        padding-bottom: 20px;
+    }
+    .logo-wrap {
+        padding-left: 20px;
+    }
+    .logo-wrap h1 {
+        left: 47px;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+    .menu {
+        display: block;
+        font-size: 30px;
+        margin-right: 15px;
+        cursor: pointer;
+        transition: transform 1s ease-in;
+    }
+    .mobile-nav {
+        display: block;
+        position: absolute;
+        top: 110%;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgb(0, 27, 27);
+
+    }
+    .mobile-nav ul li {
+        margin: 30px 40px 30px 20px;
+        border-bottom: 1px solid;
+    }
+    .mobile-nav ul li:hover {
+        border-color: rgb(255, 0, 43);
+    }
+    .mobile-nav ul li a:hover {
+        color: rgb(255, 0, 43);
+    }
+}

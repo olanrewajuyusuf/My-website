@@ -1,0 +1,84 @@
+#contact {
+    background-color: rgb(0, 34, 34);
+    padding: 50px 100px;
+    text-align: center;
+}
+
+.contact_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+form {
+    width: 60%;
+    max-width: 500px;
+    min-width: 350px;
+    padding: 20px;
+}
+form * {
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+form div {
+    margin: 5px 0;
+    text-align: left;
+}
+
+form input, textarea {
+    font-size: 16px;
+    color: gray;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px 15px;
+    outline: 0;
+    border: 0;
+    background-color: rgb(0, 34, 34);
+    box-shadow: rgb(42, 104, 104) 0 0 10px inset;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+}
+textarea {
+    height: 120px;
+    resize: none;
+}
+form input:hover, textarea:hover {
+    box-shadow: rgb(42, 104, 104) 0 0 10px;
+}
+form ._btn {
+    background-color: rgb(42, 104, 104);
+    color: rgb(0, 34, 34);
+}
+
+.phone-wrapper p {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 18px;
+    line-height: 30px;
+}
+.phone-wrapper .phone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 25px;
+    
+}
+.phone span .icon {
+    padding: 10px;
+    font-size: 40px;
+    border: 1px solid cyan;
+    border-radius: 50%;
+    box-shadow: 0 0 5px;
+}
+
+/* ======= BREAK POINT ======= */
+
+@media (max-width: 750px) {
+    #contact {
+        padding-inline: 30px;
+    }
+    .contact_container {
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+}

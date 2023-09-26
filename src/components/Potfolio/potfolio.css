@@ -1,0 +1,100 @@
+#works {
+    padding: 100px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.potfolio {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.potfolio .work {
+    position: relative;
+    overflow: hidden;
+}
+
+.potfolio .work img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 500ms ease-in;
+}
+.potfolio .work .overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    text-align: center;
+    text-shadow: 0 0 10px black;
+    font-size: 18px;
+    line-height: 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 34, 34, .2), rgba(255, 0, 43) );
+    transform: translateY(100%);
+    transition: transform 500ms ease-in;
+}
+.potfolio .work:hover .overlay {
+    transform: translateY(0%);
+}
+.potfolio .work:hover img {
+    transform: scale(1.2)
+}
+.potfolio .work .overlay h3 {
+    font-size: 25px;
+    padding: 0;
+    margin: 0;
+}
+.potfolio .work .overlay .icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.potfolio .work .overlay .icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.potfolio .work .overlay .icons a span {
+    font-size: 14px;
+    color: transparent;
+    text-shadow: 0 0 20px;
+}
+.potfolio .work .overlay .icons a:hover span {
+    color: black;
+}
+
+/* ======= BREAK POINT ======= */
+
+@media (max-width: 950px) {
+    #works {
+        padding: 50px;
+    }
+    .potfolio {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 750px) {
+    .potfolio {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 450px) {
+    #works {
+        padding-inline: 20px;
+    }
+}

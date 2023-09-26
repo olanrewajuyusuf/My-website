@@ -1,0 +1,47 @@
+footer {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 20px;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .footer-logo .socials {
+    gap: 15px;
+}
+footer .footer-logo .socials .icon {
+    font-size: 40px;
+}
+footer .logo-wrap h1 {
+    font-family: 'Pacifico', cursive;
+    left: 25px;
+}
+footer .arrow-up {
+    font-size: 70px;
+    border: 1px solid;
+    padding: 5px;
+    cursor: pointer;
+}
+footer .arrow-up:hover {
+    color: aquamarine;
+}
+
+/* ======= BREAK POINT ======= */
+
+@media (max-width: 950px) {
+    footer {
+        padding-inline: 50px;
+    }
+}
+
+@media (max-width: 950px) {
+    footer {
+        flex-direction: column;
+        padding-inline: 50px;
+        text-align: center;
+    }
+    footer .footer-logo .socials {
+        justify-content: center;
+    }
+}
