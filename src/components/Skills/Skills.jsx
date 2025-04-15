@@ -1,6 +1,6 @@
-import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs } from 'react-icons/fa'
-import { SiJavascript, SiStorybook, SiTailwindcss } from "react-icons/si";
-import { TbBrandNextjs } from "react-icons/tb";
+import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaSass } from 'react-icons/fa'
+import { SiJavascript, SiStorybook, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { TbBrandNextjs, TbBrandRedux, TbBrandVite } from "react-icons/tb";
 import './skills.css'
 
 const Skills = () => {
@@ -20,28 +20,48 @@ const Skills = () => {
             <FaCss3Alt />
         </div>
         <div>
-            <span>Tailwindcss</span>
-            <SiTailwindcss />
-        </div>
-        <div>
             <span>Javascript</span>
             <SiJavascript />
+        </div>
+        <div>
+            <span>Typescript</span>
+            <SiTypescript />
         </div>
         <div>
             <span>React</span>
             <FaReact />
         </div>
         <div>
-            <span>Node.js</span>
-            <FaNodeJs />
+            <span>Vite</span>
+            <TbBrandVite />
         </div>
         <div>
             <span>Next.js</span>
             <TbBrandNextjs />
         </div>
+        {/* <div>
+            <span>Remix.js</span>
+            <RiRemixRunFill />
+        </div> */}
+        <div>
+            <span>Tailwindcss</span>
+            <SiTailwindcss />
+        </div>
+        <div>
+            <span>Sass</span>
+            <FaSass />
+        </div>
+        <div>
+            <span>Node.js</span>
+            <FaNodeJs />
+        </div>
         <div>
             <span>Storybook</span>
             <SiStorybook />
+        </div>
+        <div>
+            <span>Redux</span>
+            <TbBrandRedux />
         </div>
       </div>
     </div>

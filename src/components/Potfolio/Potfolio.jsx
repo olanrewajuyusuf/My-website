@@ -1,123 +1,92 @@
-import {FaExternalLinkAlt, FaStreetView} from 'react-icons/fa'
+import { TbLivePhoto } from "react-icons/tb";
+import { FaCodeBranch } from "react-icons/fa";
 import './potfolio.css'
 
 const Potfolio = () => {
+
+  const projects = [
+    {
+      name: "Vettme",
+      desc: "Vettme is a comprehensive verification platform designed to help organizations securely verify and manage critical information about individuals such as employees, loan applicants, logistics drivers, field agents, and more.",
+      code: "https://github.com/olanrewajuyusuf/vettme",
+      live: "https://app.vettme.ng",
+      stacks: ["React", "Vite", "JavaScript", "Tailwind", "Typescript", "Shadcn ui", "axios"],
+      img: "vettme.png",
+    },
+    {
+      name: "ijm global landing page",
+      desc: "Landing page for Tech Security Company in Nigeria for Fleet Management, Personnel Identity Verification, Security Management Solution and Security Gadgets.",
+      code: "https://github.com/olanrewajuyusuf/vettme_pro",
+      live: "https://ijmgloballimited.com/",
+      stacks: ["React", "Vite", "JavaScript", "HTML", "Tailwind"],
+      img: "ijm.png",
+    },
+    {
+      name: "Todo Manager",
+      desc: "This Todo app helps you manage your day-to-day activities with smooth CRUD operations. You can add subtasks and easily keep track of your to-do list with a drag-and-drop feature for reordering.",
+      code: "https://github.com/olanrewajuyusuf/Todo-Manager",
+      live: "https://wallew-todomanager.netlify.app/",
+      stacks: ["React", "JavaScript", "Sass/SCSS", "HTML"],
+      img: "todo.png",
+    },
+    {
+      name: "Multi step form",
+      desc: "This application features a user-friendly multi-step form that guides users through a structured process to complete their tasks efficiently",
+      code: "https://github.com/olanrewajuyusuf/Multi-step-form",
+      live: "https://wallewdev-multistep-form.netlify.app/",
+      stacks: ["React", "Redux", "JavaScript", "HTML", "CSS"],
+      img: "multi.png",
+    },
+    {
+      name: "Movie Discovery",
+      desc: "A movie discovery app that allows users to search for top-rated movies, explore trending titles, and view detailed information about each film. Users can access movie overviews, cast and crew information, ratings, release dates, and trailers.",
+      code: "https://github.com/olanrewajuyusuf/Movies-Discovery-App",
+      live: "https://wallewdev-movies-discovery.netlify.app/",
+      stacks: ["React", "JavaScript", "HTML", "Redux", "Axios"],
+      img: "movie.png",
+    },
+    {
+      name: "E-Commerce product page",
+      desc: "A fully responsive product page featuring an interactive lightbox product gallery and robust cart functionality.",
+      code: "https://github.com/olanrewajuyusuf/Ecommerce-product-page",
+      live: "https://ecom-productpage.netlify.app/",
+      stacks: ["React", "JavaScript", "HTML"],
+      img: "sneaker.jpg",
+    },
+  ]
   return (
     <div id='works'>
         <h2>My Works</h2>
         <hr />
         <div className='potfolio'>
-            <div className="work">
-                <img src="easyb.jpg" alt="Easy bank" />
+          {projects.map((project, index)=> (
+            <div className="work" key={index}>
+              <div className='frame'><img src={project.img} alt={project.name} /></div>
                 <div className="overlay">
-                    <h3>EASY BANK LANDING PAGE</h3>
-                    <p>This landing page is a challenge that provide a nice test for layout skills with a little Javascript</p>
-                    <strong>React</strong>
+                  <div>
+                    <h3>{project.name.toUpperCase()}</h3>
+                    <p>{project.desc}</p>
+                    <span>
+                      {project?.stacks.map((stack, idx)=>(
+                        <button key={idx}>{stack}</button>
+                      ))}
+                    </span>
+                  </div>
                     <div className="icons">
-                        <a href="https://github.com/olanrewajuyusuf/Easybank_landing_page" target='-balnk' rel='noreferrer'>
-                          <FaExternalLinkAlt />
-                          <span>Visit github repo</span>
+                        <a href={project.code} target='-blank' rel='noreferrer'>
+                        <FaCodeBranch />
+                          Code
                         </a>
-                        <a href="https://wallewdev-easybank-landingpage.netlify.app" target='-balnk' rel='noreferrer'>
-                          <FaStreetView />
-                          <span>View live site</span>
+                        <a href={project.live} target='-blank' rel='noreferrer'>
+                          <TbLivePhoto />
+                          Live
                         </a>
                     </div>
                 </div>
-            </div>
-            <div className="work">
-                <img src="advice.jpg" alt="Advice Generator" />
-                <div className="overlay">
-                    <h3>ADVICE GENERATOR</h3>
-                    <p>The app generates series of advice using the Advice Slip API to generate random quotes of advice.</p>
-                    <strong>Javascript, HTML & CSS</strong>
-                    <div className="icons">
-                        <a href="https://github.com/olanrewajuyusuf/Advice-generator" target='-balnk' rel='noreferrer'>
-                          <FaExternalLinkAlt />
-                          <span>Visit github repo</span>
-                        </a>
-                        <a href="https://wallewdev-advice-generator.netlify.app" target='-balnk' rel='noreferrer'>
-                          <FaStreetView />
-                          <span>View live site</span>
-                        </a>
-                    </div>    
-                </div>
-            </div>
-            <div className="work">
-                <img src="multi-step.jpg" alt="Multistep form" />
-                <div className="overlay">
-                    <h3>MULTISTEP FORM</h3>
-                    <p>This multistep for m allows you to sign in and fill the reqired sections to purchase your game.</p>
-                    <strong>React, Redux</strong>
-                    <div className="icons">
-                        <a href="https://github.com/olanrewajuyusuf/Multi-step-form" target='-balnk' rel='noreferrer'>
-                          <FaExternalLinkAlt />
-                          <span>Visit github repo</span>
-                        </a>
-                        <a href="https://wallewdev-multistep-form.netlify.app" target='-balnk' rel='noreferrer'>
-                          <FaStreetView />
-                          <span>View live site</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div className="work">
-                <img src="sneaker.jpg" alt="snaeaker" />
-                <div className="overlay">
-                    <h3>E-COMMERCE PRODUCT PAGE</h3>
-                    <p>A product page with a lightbox product gallery and cart functionality</p>
-                    <strong>React</strong>
-                    <div className="icons">
-                        <a href="https://github.com/olanrewajuyusuf/Ecommerce-product-page" target='-balnk' rel='noreferrer'>
-                          <FaExternalLinkAlt />
-                          <span>Visit github repo</span>
-                        </a>
-                        <a href="https://ecom-productpage.netlify.app/" target='-balnk' rel='noreferrer'>
-                          <FaStreetView />
-                          <span>View live site</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div className="work">
-                <img src="tip.jpg" alt="Tip calculator" />
-                <div className="overlay">
-                    <h3>TIP CALCULATOR</h3>
-                    <p>Calculates the correct tip and total cost of the bill per person</p>
-                    <strong>Javascript, HTML & CSS</strong>
-                    <div className="icons">
-                        <a href="https://github.com/olanrewajuyusuf/Tip_calculator_app" target='-balnk' rel='noreferrer'>
-                          <FaExternalLinkAlt />
-                          <span>Visit github repo</span>
-                        </a>
-                        <a href="https://wallewdev-tip-calculator.netlify.app" target='-balnk' rel='noreferrer'>
-                          <FaStreetView />
-                          <span>View live site</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div className="work">
-                <img src="movie.png" alt="Movie box" />
-                <div className="overlay">
-                    <h3>MOVIE DISCOVERY</h3>
-                    <p>A movie discovery app where you will be able to search your top rated movies and view it's details.</p>
-                    <strong>React</strong>
-                    <div className="icons">
-                        <a href="https://github.com/olanrewajuyusuf/Movies-Discovery-App" target='-balnk' rel='noreferrer'>
-                          <FaExternalLinkAlt />
-                          <span>Visit github repo</span>
-                        </a>
-                        <a href="https://wallewdev-movies-discovery.netlify.app/" target='-balnk' rel='noreferrer'>
-                          <FaStreetView />
-                          <span>View live site</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            </div>))}
         </div>
     </div>
   )
 }
 
-export default Potfolio
+export default Potfolio;
